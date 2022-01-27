@@ -14,14 +14,9 @@
 <div class="details">
     <div class="links clearfix">
         <ul class="links-menu">
-            {% for link in products_menu %}
-            <li><a href="{{ link.href }}"
-                   {% if request.resolve_match == link.url %}
-                   class="active"
-                   {% endif %}
-            >
-                {{ link.name }}
-            </a></li>
+            <li><a href="#" class="active">Все</a></li>
+            {% for category in categories %}
+            <li><a href="#" class="active">{{ category.name }}</a></li>
             {% endfor %}
         </ul>
     </div>
